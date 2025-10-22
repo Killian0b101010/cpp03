@@ -9,17 +9,19 @@ RM = rm -rf
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-				$(CC) $(FLAGS) -o $(NAME)
+				$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 %.o : %.cpp 
-		$(CC) $(FLAGS) $< -o $@ 
+		$(CC) $(FLAGS) -c $< -o $@ 
 
 clean : 
-			$(RM) $(NAME)
+			$(RM) $(OBJ) $(DEP)
 
 fclean: clean 
-				$(RM) $(DEP) $(OBJ)
+				$(RM) $(NAME)
 
 re : fclean
 
 -include $(DEP)
+
+.PHONY: clean fclean re 
