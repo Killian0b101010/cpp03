@@ -35,11 +35,22 @@ void ClapTrap::attack(const std::string &target) {
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
+  if (amount > 1) {
+    std::cout << "Tu veux tapper trop fort" << std::endl;
+    return;
+  }
   std::cout << "ClapTrap " << "take" << amount << " points of damage"
             << std::endl;
 }
 
+
 void ClapTrap::beRepaired(unsigned int amount) {
+
+  if(amount > 10)
+  {
+    std::cout << "Tu demandes trop de soins" << std::endl;
+    return;
+  }
   if (energyPoints == 0)
     std::cout << "Claptrap" << this->name << " has no point" << std::endl;
   energyPoints--;
