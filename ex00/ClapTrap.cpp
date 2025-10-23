@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 06:59:44 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/22 21:05:17 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/23 05:15:23 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 #include <iostream>
 
 ClapTrap::ClapTrap(std::string name) {
-  this->name = name;
+  if (name.empty())
+    this->name = "Default";
+  else
+    this->name = name;
   this->hitPoints = 10;
   this->energyPoints = 10;
   this->attackDamage = 0;
@@ -43,11 +46,9 @@ void ClapTrap::takeDamage(unsigned int amount) {
             << std::endl;
 }
 
-
 void ClapTrap::beRepaired(unsigned int amount) {
 
-  if(amount > 10)
-  {
+  if (amount > 10) {
     std::cout << "Tu demandes trop de soins" << std::endl;
     return;
   }
