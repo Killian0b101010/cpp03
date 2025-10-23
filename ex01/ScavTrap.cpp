@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 21:53:49 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/23 04:58:23 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/23 06:41:19 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void ScavTrap::attack(const std::string &target) {
   if (hitPoints == 2)
     beRepaired(8);
   if (hitPoints > 2 && energyPoints != 0)
-    std::cout << "ScavpTrap " << this->name << " attacks " << target
+    std::cout << "ScavTrap " << this->name << " attacks " << target
               << ", causing " << attackDamage << " points of damage!"
               << std::endl;
 }

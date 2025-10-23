@@ -6,11 +6,11 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 21:56:44 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/23 04:20:43 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/23 06:39:50 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef CLAVTRAP_HPP
-#define CLAVTRAP_HPP
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 #include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap {
