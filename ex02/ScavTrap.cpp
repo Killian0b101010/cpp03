@@ -6,12 +6,21 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 21:53:49 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/23 04:58:23 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/24 02:01:18 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include <iostream>
+
+ScavTrap::ScavTrap() {}
+
+ScavTrap::ScavTrap(const ScavTrap &scav) { this->name = scav.name; }
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &scav) {
+  (void)&scav;
+  return (*this);
+}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
   if (name.empty())

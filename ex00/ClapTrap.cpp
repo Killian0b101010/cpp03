@@ -13,6 +13,14 @@
 #include "ClapTrap.hpp"
 #include <iostream>
 
+ClapTrap::ClapTrap() {}
+
+ClapTrap::ClapTrap(const ClapTrap &clap) { this->name = clap.name; }
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &clap) {
+  (void)&clap;
+  return (*this);
+}
 ClapTrap::ClapTrap(std::string name) {
   if (name.empty())
     this->name = "Default";

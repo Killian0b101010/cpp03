@@ -6,12 +6,21 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 00:59:09 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/24 01:19:17 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/24 02:03:55 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 #include <iostream>
+
+FragTrap::FragTrap() {}
+
+FragTrap::FragTrap(const FragTrap &frag) { this->name = frag.name; }
+
+FragTrap &FragTrap::operator=(const FragTrap &frag) {
+  (void)&frag;
+  return (*this);
+}
 
 FragTrap::FragTrap(const std::string name) {
   this->name = name;

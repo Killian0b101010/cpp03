@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 19:44:40 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/24 01:04:24 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/24 02:04:39 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ protected:
 
 public:
   ClapTrap();
-  ClapTrap(ClapTrap &scav);
+  ClapTrap(const ClapTrap &scav);
   ClapTrap(std::string name);
   ClapTrap &operator=(const ClapTrap &other);
   ~ClapTrap();

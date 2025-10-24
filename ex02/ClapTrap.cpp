@@ -6,15 +6,20 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 06:59:44 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/24 01:18:03 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/24 02:04:29 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap() {
-  std::cout << "ClapTrap constructor default" << std::endl;
+ClapTrap::ClapTrap() {}
+
+ClapTrap::ClapTrap(const ClapTrap &clap) { this->name = clap.name; }
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &clap) {
+  (void)&clap;
+  return (*this);
 }
 
 ClapTrap::ClapTrap(std::string name) {
