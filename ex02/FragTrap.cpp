@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 00:59:09 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/24 02:03:55 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/24 06:25:04 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ FragTrap::FragTrap(const std::string name) {
 }
 
 void FragTrap::highFivesGuys(void) {
-  std::cout << "FragTrap " << this->name << " it's here" << std::endl;
+  std::cout << "FragTrap " << this->name << " requests a high five✋ " << RESET
+            << std::endl;
 }
 
 void FragTrap::attack(const std::string &target) {
